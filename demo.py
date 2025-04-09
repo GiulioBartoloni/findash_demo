@@ -153,6 +153,3 @@ elif opzione == "Studia le correlazioni":
             nx.draw_networkx_labels(G, pos, labels, font_size=12)
             nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10)
             st.pyplot(plt)
-    """, unsafe_allow_html=True)        
-    if st.button("Esporta come PDF", type="primary", key="footer_btn"):
-        st.write("PDF SALVATO!")
