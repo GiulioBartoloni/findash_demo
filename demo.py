@@ -15,7 +15,7 @@ DATI_RICERCA = [
     "American Airlines Group Inc.", "AA Mission Acquisition Corp.", "Atlantic American Corporation", "Acadian Asset Management Inc.", "Applied Optoelectronics, Inc."
     ]
 
-img = Image.open('/home/giulio/Dropbox/LWS/Progetto/FinDash_logo.png')
+img = Image.open('FinDash_logo.png')
 
 # Converti in base64
 buffered = io.BytesIO()
