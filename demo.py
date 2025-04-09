@@ -15,18 +15,18 @@ DATI_RICERCA = [
     "American Airlines Group Inc.", "AA Mission Acquisition Corp.", "Atlantic American Corporation", "Acadian Asset Management Inc.", "Applied Optoelectronics, Inc."
     ]
 
-# img = Image.open('/home/giulio/Dropbox/LWS/Progetto/FinDash_logo.png')
+img = Image.open('/home/giulio/Dropbox/LWS/Progetto/FinDash_logo.png')
 
 # Converti in base64
-# buffered = io.BytesIO()
-# img.save(buffered, format="PNG")
-# img_str = base64.b64encode(buffered.getvalue()).decode()
+buffered = io.BytesIO()
+img.save(buffered, format="PNG")
+img_str = base64.b64encode(buffered.getvalue()).decode()
 
 # Mostra nella sidebar con larghezza in %
-# st.sidebar.markdown(
-#     f'<img src="data:image/png;base64,{img_str}" style="width:50%; max-width:100%; margin-top: -50px;margin-bottom: 100px">',
-#     unsafe_allow_html=True
-# )
+st.sidebar.markdown(
+    f'<img src="data:image/png;base64,{img_str}" style="width:50%; max-width:100%; margin-top: -50px;margin-bottom: 100px">',
+    unsafe_allow_html=True
+)
 
 # Sidebar
 st.sidebar.header("Menu")
