@@ -121,11 +121,11 @@ elif opzione == "Studia le correlazioni":
     st.title("Selezione Multipla")
 
     selected = st.multiselect(
-        "Seleziona fino a 5 città:",
+        "Seleziona fino a 5 azioni:",
         DATI_RICERCA,
         default=None,
         placeholder="Cerca o seleziona...",
-        max_selections=5  # Disponibile dalla versione 1.31.0
+        max_selections=6  # Disponibile dalla versione 1.31.0
     )
     if st.button("Mostra selezione", type="primary"):
         if not selected:
@@ -153,24 +153,6 @@ elif opzione == "Studia le correlazioni":
             nx.draw_networkx_labels(G, pos, labels, font_size=12)
             nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10)
             st.pyplot(plt)
-            
-            
-            
-    st.markdown("""
-    <style>
-    .fixed-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 100;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <div class="fixed-button">
-        <button class="stButton">Esporta come PDF!</button>
-    </div>
     """, unsafe_allow_html=True)        
     if st.button("Esporta come PDF", type="primary", key="footer_btn"):
         st.write("PDF SALVATO!")
